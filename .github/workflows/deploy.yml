@@ -38,5 +38,5 @@ jobs:
     - name: Deploy to Kubernetes
       run: |
         export KUBECONFIG=kubeconfig
-        kubectl apply -f deployment.yaml && kubectl set image deployment/webapp-ipcheck-devops webapp-diploma=northsilver/webapp-ipcheck-devops:${{ github.ref_name }}
+        kubectl apply -f deployment.yaml && kubectl set image deployment/webapp-ipcheck-devops webapp-ipcheck-devops=northsilver/webapp-ipcheck-devops:${{ github.ref_name }}
 
